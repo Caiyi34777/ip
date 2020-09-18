@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.util.Duration;
 
+/** Represents a main class with UI implemented. */
 public class MainWithUi extends Application {
     private ScrollPane scrollPane;
     private VBox dialogContainer;
@@ -37,6 +38,9 @@ public class MainWithUi extends Application {
             .get(System.getProperty("user.home"), "start.txt");
     private Duke dukeBot = new Duke(path);
 
+    /**
+     * Starts GUI.
+     */
     @Override
     public void start(Stage stage) throws Exception {
         //Step 1. Setting up required components
@@ -114,7 +118,6 @@ public class MainWithUi extends Application {
     }
 
     /**
-     * Iteration 2:
      * Creates dialog boxes, containing user's input and Duke's reply and then appends them to
      * the dialog container. Clears the user input after processing.
      */
